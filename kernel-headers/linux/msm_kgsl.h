@@ -44,6 +44,7 @@
 #define KGSL_CONTEXT_TYPE_CL 2
 #define KGSL_CONTEXT_TYPE_C2D 3
 #define KGSL_CONTEXT_TYPE_RS 4
+#define KGSL_CONTEXT_TYPE_UNKNOWN	0x1E
 #define KGSL_CONTEXT_INVALID 0xffffffff
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define KGSL_MEMFLAGS_GPUREADONLY 0x01000000
@@ -492,8 +493,7 @@ struct kgsl_perfcounter_get {
  unsigned int countable;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned int offset;
- unsigned int offset_hi;
- unsigned int __pad;
+ unsigned int __pad[2];
 };
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define IOCTL_KGSL_PERFCOUNTER_GET   _IOWR(KGSL_IOC_TYPE, 0x38, struct kgsl_perfcounter_get)
