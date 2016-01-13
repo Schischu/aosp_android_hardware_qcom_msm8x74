@@ -69,6 +69,7 @@ struct msm_rotator_platform_data {
  unsigned int number_of_clocks;
  unsigned int hardware_version_number;
  struct msm_rot_clocks *rotator_clks;
+ struct msm_bus_scale_pdata *bus_scale_table;
  char rot_iommu_split_domain;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
